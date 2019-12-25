@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX</title>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!-- The load() method loads data from a server and puts the returned data into the selecred element.
+
+    $(selector).load(URL,data,callback); -->
+
+    <!-- <div class="container">
+        <div id="loaddata">
+            <h2>this is going to change...</h2>
+        </div>
+        <button class="btn btn-success" id="btnclick">Click on it</button>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#btnclick').click(function(){
+                $('#loaddata').load('load.html',function(){
+                    alert("this is done..");
+                });
+            });
+        });
+    </script> -->
+
+    <!-- The XMLHttpRequest object is used to exchange data with a server.
+
+    To send a request to a server, we use the open() and send() method of the XMLHttpRequest object:
+
+    open(method, url, async)     Specifies the type of request
+
+    method: the type of request: GET or POST
+    url: the server (file) location
+    async: true (asyncronous) or false (synchronous)
+    send() Sends the request to the server (used for GET)
+
+    AJAX- Server Response
+    the readyState property holds the status of the XMLHttpRequest.
+
+    The onreadystatechange property defines a function to be executed when the readyState changes.
+
+    The status property and the statusText property holds the status of the XMLHttpRequest object. -->
+
+    <!-- <div class="containar">
+        <div id="loaddata">
+            <h3>this is going to be change.....</h3>
+        </div>
+        <button class="btn btn-primary" onclick="myfun()">
+             Clicl on it 
+        </button>
+    </div>
+    
+    <script type="text/javascript">
+        function myfun(){
+            var req = new XMLHttpRequest();
+            req.open('GET','load.html',true);
+            req.send();
+
+            req.onreadystatechange = function (){
+                if (req.readyState == 4 && req.status == 200){
+                    document.getElementById('loaddata').innerHTML = req.responseText;
+                }
+            }
+        }
+    </script> -->
+
+
+    <!-- jQuery $.get() method
+    The $.get() method requests data from the server with an HTTP GET request.
+
+    syntax:
+    $.get(URL,callback);
+    The required URL parameter specifies the URL you wash to request.
+
+    The optional callback parameter is the server using to be executed if the request succeeds.
+
+
+    jQuery $.post() method
+    The $.post() method request data from the server using an HTTP POST request.
+
+    syntax:
+    $.post(URL,data,callback);
+    The required URL parameter specifies the URL you wash to request.
+
+    The optional data parameter specifiers some data to send along with the request.
+
+    The optional callback parameter is the server using to be executed if the request succeeds. -->
+
+<!-- <div class="container">
+    <p id="changehere"> <h1>This line is going to change..2</h1></p>
+    <button class="btn btn-primary btnclick">Click on it</button>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.btnclick').click(function(){
+
+            $.get('get.html',function(data,status){
+                $('#changehere').html(data);
+                alert(status);
+            });
+
+            $.post('post.php',{
+                name : "Thapa Technical",
+                subs : "subscribed"
+            },function(data,status){
+                $('#changehere').html(data);
+                alert(status);
+            });
+        });
+    });
+</script> -->
+
+</body>
+
+</html>
